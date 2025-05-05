@@ -12,17 +12,17 @@ def main():
 
     dp.add_handler(CommandHandler('start', start))
 
-    PORT = int(os.environ.get('PORT', '8443'))
+    PORT = 8443
     APP_NAME = 'maxielperbot'
 
     updater.start_webhook(
         listen='0.0.0.0',
-        port=8443,
+        port=PORT,
         url_path=TOKEN
     )
-    updater.bot.set_webhook(f"https://{APP_NAME}.onrender.com/{TOKEN}")
+    updater.bot.set_webhook(f"https://maxielperbot.onrender.com/{TOKEN}")
 
     updater.idle()
 
-if __name__ == '__main__':
+if name == '__main__':
     main()
