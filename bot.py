@@ -13,14 +13,14 @@ def main():
     dp.add_handler(CommandHandler('start', start))
 
     PORT = int(os.environ.get('PORT', '8443'))
-    HEROKU_APP_NAME = 'maxielperbot'  # ← замени на своё имя приложения на Render
+    APP_NAME = 'maxielperbot'  # ← замени на имя твоего Render приложения
 
     updater.start_webhook(
         listen='0.0.0.0',
         port=PORT,
         url_path=TOKEN
     )
-    updater.bot.set_webhook(f"https://{HEROKU_APP_NAME}.onrender.com/{TOKEN}")
+    updater.bot.set_webhook(f"https://{APP_NAME}.onrender.com/{TOKEN}")
 
     updater.idle()
 
