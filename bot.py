@@ -12,7 +12,7 @@ def main():
 
     dp.add_handler(CommandHandler('start', start))
 
-    PORT = 8443
+    PORT = 443
     APP_NAME = 'maxielperbot'
 
     updater.start_webhook(
