@@ -13,7 +13,7 @@ def main():
     dp.add_handler(CommandHandler('start', start))
 
     PORT = int(os.environ.get('PORT', '8443'))
-    APP_NAME = 'maxielperbot'  # ← замени на имя твоего Render приложения
+    APP_NAME = 'maxielperbot'
 
     updater.start_webhook(
         listen='0.0.0.0',
