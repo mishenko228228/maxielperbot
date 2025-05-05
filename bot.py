@@ -12,7 +12,7 @@ def main():
 
     dp.add_handler(CommandHandler('start', start))
 
-    PORT = int(os.environ.get('PORT', 8443))
+    PORT = 8443
 
     updater.start_webhook(
         listen='0.0.0.0',
